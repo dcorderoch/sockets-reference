@@ -33,7 +33,7 @@
 #include <netinet/in.h>
  // for struct in_addr
 
- #include "intuitiveStringOps.h"
+#include "intuitiveStringOps.h"
 
 bool correctNumberOfArguments(int * pArgC);
 bool correctArgs(char * arg);

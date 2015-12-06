@@ -74,8 +74,7 @@ int tests(int * argc, char * argv[])
 
 		read_size = recv(clientsocket,clientMSG,512,0);
 		char * msgcheck = 0;
-		while(read_size >
- 0)
+		while(read_size > 0)
 		{
 			printf("message: %s",clientMSG);
 			//strncasecmp()

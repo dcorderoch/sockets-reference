@@ -23,6 +23,3 @@ $(ODIR)/%.o : $(SDIR)/%.c
 .PHONY : clean
 clean:
 	rm -f $(OBJ) $(EXE)
-.PHONY : run
-run : all
-	./$(EXE)

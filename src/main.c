@@ -110,8 +110,7 @@ int main(int argc, char * argv[])
 
         read_size = recv(clientsocket,clientMSG,512,0);
         char * msgcheck = 0;
-        while(read_size >
- 0)
+        while(read_size > 0)
         {
             printf("message: %s",clientMSG);
             //strncasecmp()
@@ -155,12 +154,12 @@ void run()
     int     exit_flag = 0;
     int     valid_choice;
 
-    while( exit_flag  == 0 )
+    while(exit_flag == 0)
     {
         printf("Enter a line of text (<80 chars)\n");
         ch = getchar();
         char_count = 0;
-        while( (ch != '\n')  &&  (char_count < MAXBUFFERSIZE))
+        while((ch != '\n')  &&  (char_count < MAXBUFFERSIZE))
         {
             buffer[char_count++] = ch;
             ch = getchar();
@@ -170,18 +169,18 @@ void run()
         printf("%s\n", buffer);
 
         valid_choice = 0;
-        while( valid_choice == 0 )
+        while(valid_choice == 0)
         {
             printf("Continue (Y/N)?\n");
             scanf(" %c", &ch );
             ch = toupper( ch );
-            if((ch == 'Y') || (ch == 'N') )
+            if((ch == 'Y') || (ch == 'N'))
                 valid_choice = 1;
             else
                 printf("\007Error: Invalid choice\n");
             cleartoendofline();
         }
-        if( ch == 'N' )
+        if(ch == 'N')
             exit_flag = 1;
     }
 }
