@@ -37,6 +37,6 @@
 #include "specifics.h"
 
 void typesizereference();
-int tests(int argc, char * argv[]);
+int tests(int * argc, char * argv[]);
 
 #endif /* SRC_TESTMAIN_H_ */

@@ -9,7 +9,8 @@
 
 bool correctArgs(char * arg)
 {
-	printf("start correctargs with arg:\"%s\"\n",arg);
+	printf("start correctargs with arg:\n");
+	printf("\"%s\"\n",arg);
 	bool retVal = true;
 
 	char client[3] = "-c\0";

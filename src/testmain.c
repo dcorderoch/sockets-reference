@@ -8,7 +8,7 @@
 
 #include "testmain.h"
 
-int tests(int argc, char * argv[])
+int tests(int * argc, char * argv[])
 {
 	char arg[3];
 	arg[0] = '-';
@@ -19,9 +19,11 @@ int tests(int argc, char * argv[])
 	arg[1] = 's';
 	arg[2] = 0;
 	correctArgs(arg);
-	printf("number of arguments: %d\n", argc);
-	printf("length of %s is %lu\n",argv[1],strlen(argv[1]));
-	if(correctNumberOfArguments(&argc) && correctArgs(argv[1]))
+	printf("before if - number of arguments: %d\n", *argc);
+	//the following comented line could cause
+	//segmentation fault of there are no arguments
+	//printf("length of %s is %lu\n",argv[1],strlen(argv[1]));
+	if(correctNumberOfArguments(argc) && correctArgs(argv[1]))
 	{
 		//run
 		short portno = 10600;
