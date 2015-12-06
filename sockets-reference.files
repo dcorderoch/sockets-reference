@@ -1,0 +1,7 @@
+src/intuitiveStringOps.c
+src/intuitiveStringOps.h
+src/main.c
+src/specifics.c
+src/specifics.h
+src/testmain.c
+src/testmain.h
